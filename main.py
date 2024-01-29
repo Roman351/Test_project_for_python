@@ -1,10 +1,19 @@
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from User import User
+from Item import Item
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('Students')
+name = "Ivan"
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+Ivan = User(name, "+7 999 999 99 99", "Ivan@gmail.com")
+order1 = Ivan.create_order()
+order1 = Ivan.create_order()
+order1 = Ivan.create_order()
+order1.add_item(Item("ноутбук"))
+order1.add_item(Item("наушники"))
+order1.add_item(Item("Лампа"))
+
+print(Ivan)
+print(Ivan.get_orders()[0])
+print(Ivan.get_orders()[0].get_items())
+
+#order1.add_item("ноутбук")
